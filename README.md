@@ -1,6 +1,6 @@
 # @vercel/nft playwright-core bug
 
-Playwright can not be deployed to Vercel since @vercel/nft 0.12.0 was released. This was previously working with @vercel/nft 0.11.2.
+Playwright cannot be deployed to Vercel since @vercel/nft 0.12.0 was released. This was previously working with @vercel/nft 0.11.2.
 
 Playwright [requires a file named `browsers.json`](https://github.com/microsoft/playwright/blob/9cd89ae0525b327ce435ae3e4aadcba035621ee9/src/utils/registry.ts#L261), which is not being traced by @vercel/nft 0.12.0.
 
