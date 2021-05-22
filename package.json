@@ -5,16 +5,18 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tap"
   },
   "keywords": [],
   "author": "Ash",
   "license": "ISC",
   "dependencies": {
-    "@vercel/nft": "^0.12.0",
+    "@vercel/nft-0.11.2": "npm:@vercel/nft@^0.11.2",
+    "@vercel/nft-0.12.0": "npm:@vercel/nft@^0.12.0",
     "playwright-core": "^1.12.0-next-alpha-may-21-2021"
   },
   "devDependencies": {
-    "prettier": "^2.3.0"
+    "prettier": "^2.3.0",
+    "tap": "^15.0.9"
   }
 }
