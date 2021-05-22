@@ -4,10 +4,7 @@ import { nodeFileTrace as nodeFileTrace_0_12_0 } from '@vercel/nft-0.12.0'
 
 const testNft = async nft => {
   const { fileList } = await nft(['./playwright.js'])
-
-  return fileList.filter(name =>
-    name.includes('node_modules/playwright-core/browsers.json'),
-  )
+  return fileList.includes('node_modules/playwright-core/browsers.json')
 }
 
 // Run both @vercel/nft 0.11.2 and 0.12.0, and check that the file
@@ -18,6 +15,6 @@ t.test('NFT includes `playwright-core/browsers.json`', async () => {
     testNft(nodeFileTrace_0_12_0),
   ])
 
-  t.ok(matches_0_11_2.length === 1, '@vercel/nft 0.11.2')
-  t.ok(matches_0_12_0.length === 1, '@vercel/nft 0.12.0')
+  t.ok(matches_0_11_2, '@vercel/nft 0.11.2')
+  t.ok(matches_0_12_0, '@vercel/nft 0.12.0')
 })
